@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 function Form({ handle }) {
   const [isi, setIsi] = useState("");
 
@@ -20,7 +21,7 @@ function Form({ handle }) {
           <input id="name" type="text" required onChange={handleChange} />
           <br />
 
-          <button type="submit">search</button>
+          {/* <button type="submit">search</button> */}
         </form>
       </div>
     </div>

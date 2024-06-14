@@ -2,10 +2,6 @@
 import { Item } from "./item";
 
 function Result({ data }) {
-  return (
-    <div className="result">
-      <Item data={data} />
-    </div>
-  );
+  return <Item data={data} />;
 }
 export default Result;
