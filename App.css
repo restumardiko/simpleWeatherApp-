@@ -40,6 +40,9 @@
 .read-the-docs {
   color: #888;
 } */
+* {
+  border: black solid 1px;
+}
 html,
 body,
 #root {
@@ -47,8 +50,17 @@ body,
   height: 100%;
 }
 #Clouds {
-  background-image: url("bg2.jpg");
+  background-image: url("/src/assets/cloudy3.jpg");
   /* background-repeat: no-repeat; */
+}
+#Haze {
+  background-image: url("/src/assets/clear3.jpg");
+}
+#Mist {
+  background-image: url("/src/assets/cloudy3.jpg");
+}
+#Clear {
+  background-image: url("/src/assets/clear3.jpg");
 }
 
 .weather-app {
@@ -57,7 +69,7 @@ body,
   grid-template-rows: 40% 1fr;
   grid-gap: 1em;
   justify-content: center;
-  background-image: url("bg.jpg");
+  background-image: url("src/assets/clear2.jpg");
   /* background-repeat: no-repeat; */
 }
 .search-container {
@@ -68,14 +80,20 @@ body,
 .result-container {
   justify-self: center;
 }
+h1 {
+  margin: 2em;
+}
+
 form {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 form #name {
-  width: 30em;
+  width: 20em;
   height: 2em;
+  font-size: xx-large;
+  justify-self: center;
 }
 button {
   margin: 1em;
@@ -84,7 +102,12 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: 0.2em black solid;
+  background-color: white;
 
   border-radius: 0.5em;
   width: 15em;
+}
+p {
+  color: black;
 }
