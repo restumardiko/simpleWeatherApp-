@@ -7,7 +7,7 @@ function Form({ handle }) {
   const handleChange = (e) => {
     e.preventDefault();
     const value = e.target.value;
-    console.log(isi);
+    // console.log(isi);
     setIsi(value);
   };
   const handleClick = (e) => {

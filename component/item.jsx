@@ -1,5 +1,5 @@
 export function Item({ data }) {
-  console.log(data);
+  //console.log(data);
   if (data.cod === 200) {
     return (
       <div className="result">

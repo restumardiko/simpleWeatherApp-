@@ -1,26 +1,24 @@
 import { useState, useEffect, useRef } from "react";
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+
 import SearchContainer from "./component/SearchContainer";
 import ResultContainer from "./component/ResultContainer";
 import "./App.css";
-const apiKey = process.env.appweatherkey;
+// eslint-disable-next-line no-undef
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
 function App() {
   const container = useRef(null);
   const [state, setState] = useState("");
 
   const handleFetch = (ab) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ab},&APPID=${apiKey}units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ab}&appid=${apiKey}&units=metric`;
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setState(data);
-        console.log("heyuo");
       })
       .catch((error) => {
-        console.log(error);
         setState(error);
       });
   };
