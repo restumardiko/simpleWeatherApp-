@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import SearchContainer from "./component/SearchContainer";
 import ResultContainer from "./component/ResultContainer";
 import "./App.css";
+const apiKey = process.env.appweatherkey;
 
 function App() {
   const container = useRef(null);
   const [state, setState] = useState("");
 
   const handleFetch = (ab) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ab},&APPID=5f1c32d0fe52ed132ff14da315111286&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ab},&APPID=${apiKey}units=metric`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
