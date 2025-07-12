@@ -10,21 +10,21 @@ body,
 }
 
 #Clouds {
-  background-image: url("/src/assets/cloudy3.jpg");
+  background-image: url("/assets/cloudy3.jpg");
   height: 100%;
 
   /* background-repeat: no-repeat; */
 }
 #Haze {
-  background-image: url("/src/assets/haze.jpg");
+  background-image: url("/assets/haze.jpg");
   height: 100%;
 }
 #Mist {
-  background-image: url("/src/assets/misty.jpg");
+  background-image: url("/assets/misty.jpg");
   height: 100%;
 }
 #Clear {
-  background-image: url("/src/assets/clear3.jpg");
+  background-image: url("/assets/clear3.jpg");
   height: 100%;
 }
 
@@ -34,10 +34,12 @@ body,
   grid-template-rows: 20% 2fr;
   grid-gap: 1em;
   justify-content: center;
-  background-image: url("src/assets/clear.jpg");
+  background-image: url("/assets/clear.jpg");
   height: 100%;
 
-  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .search-container {
   justify-self: center;
