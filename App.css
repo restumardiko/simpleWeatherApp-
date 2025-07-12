@@ -1,6 +1,3 @@
-* {
-  outline: lime solid 1px;
-}
 html,
 body,
 #root {
@@ -12,8 +9,6 @@ body,
 #Clouds {
   background-image: url("/assets/cloudy3.jpg");
   height: 100%;
-
-  /* background-repeat: no-repeat; */
 }
 #Haze {
   background-image: url("/assets/haze.webp");
