@@ -16,15 +16,15 @@ body,
   /* background-repeat: no-repeat; */
 }
 #Haze {
-  background-image: url("/assets/haze.jpg");
+  background-image: url("/assets/haze.webp");
   height: 100%;
 }
 #Mist {
-  background-image: url("/assets/misty.jpg");
+  background-image: url("/assets/misty.webp");
   height: 100%;
 }
 #Clear {
-  background-image: url("/assets/clear3.jpg");
+  background-image: url("/assets/clear3.webp");
   height: 100%;
 }
 
@@ -34,7 +34,7 @@ body,
   grid-template-rows: 20% 2fr;
   grid-gap: 1em;
   justify-content: center;
-  background-image: url("/assets/clear.jpg");
+  background-image: url("/assets/clear.webp");
   height: 100%;
 
   background-size: cover;
