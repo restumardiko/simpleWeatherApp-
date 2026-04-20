@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
-import SearchContainer from "./component/SearchContainer";
-import ResultContainer from "./component/ResultContainer";
+import SearchContainer from "../component/SearchContainer";
+import ResultContainer from "../component/ResultContainer";
 import "./App.css";
 // eslint-disable-next-line no-undef
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
