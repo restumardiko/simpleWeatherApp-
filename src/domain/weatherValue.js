@@ -1,4 +1,4 @@
-export default function weatherValue(weatherData) {
+export default function getWeatherValue(weatherData) {
   //this contain value from raw data
   const city = weatherData.name;
   const condition = weatherData.weather[0].main;
