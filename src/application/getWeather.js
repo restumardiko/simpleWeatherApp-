@@ -2,9 +2,9 @@ import getBackground from "../domain/background";
 import getWeatherCondition from "../domain/weatherCondition";
 import getWeatherValue from "../domain/weatherValue";
 
-export default async function getWeatherUseCase(city, weatherRepo) {
+export default async function getWeatherUseCase(city, getWeatherRepo) {
   //ambil data dari api
-  const data = await weatherRepo(city);
+  const data = await getWeatherRepo(city);
   //tentukan weather value
   const weatherValue = getWeatherValue(data);
   //tentukan kondisi weather
