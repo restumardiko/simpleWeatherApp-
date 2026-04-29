@@ -1,9 +1,9 @@
-import Form from "./controlledForm";
+import Form from "./form";
 import { RecentSearch } from "./recentSearch";
-function SearchContainer(props) {
+function SearchContainer({ handleSearch }) {
   return (
     <div className="search-container">
-      <Form handle={props.fetching} />
+      <Form handleSearch={handleSearch} />
       <RecentSearch />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-function Form({ handle }) {
+function Form({ handleSearch }) {
   const [isi, setIsi] = useState("");
 
   const handleChange = (e) => {
@@ -11,8 +11,9 @@ function Form({ handle }) {
     setIsi(value);
   };
   const handleClick = (e) => {
+    console.log("clicked");
     e.preventDefault();
-    handle(isi.trim());
+    handleSearch(isi.trim());
   };
   return (
     <div className="form">

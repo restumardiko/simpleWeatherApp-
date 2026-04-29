@@ -7,7 +7,7 @@ body,
 }
 
 #Clouds {
-  background-image: url("/assets/cloudy3.webp");
+  background-image: url("/assets/clouds.webp");
   height: 100%;
 }
 #Haze {
@@ -15,11 +15,11 @@ body,
   height: 100%;
 }
 #Mist {
-  background-image: url("/assets/misty.webp");
+  background-image: url("/assets/mist.webp");
   height: 100%;
 }
 #Clear {
-  background-image: url("/assets/clear3.webp");
+  background-image: url("/assets/clear.webp");
   height: 100%;
 }
 

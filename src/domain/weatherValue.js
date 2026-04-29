@@ -1,20 +1,29 @@
 export default function getWeatherValue(weatherData) {
-  //this contain value from raw data
-  const city = weatherData.name;
-  const condition = weatherData.weather[0].main;
-  const temperature = weatherData.main.temp;
-  const humidity = weatherData.main.humidity;
-  const pressure = weatherData.main.pressure;
-  const windSpeed = weatherData.wind.speed;
-  const visibility = weatherData.visibility;
-
+  if (weatherData.type === "NOT_FOUND") {
+    return {
+      status: "error",
+      message: "city not found !",
+      data: {},
+    };
+  }
+  if (weatherData.type === "SUCCESS") {
+    return {
+      status: "ok",
+      message: "success",
+      data: {
+        city: weatherData.city,
+        condition: weatherData.condition,
+        temperature: weatherData.temperature,
+        humidity: weatherData.humidity,
+        pressure: weatherData.pressure,
+        windSpeed: weatherData.windSpeed,
+        visibility: weatherData.visibility,
+      },
+    };
+  }
   return {
-    city: city,
-    condition: condition,
-    temperature: temperature,
-    humidity: humidity,
-    pressure: pressure,
-    windSpeed: windSpeed,
-    visibility: visibility,
+    status: "errorr",
+    message: "something wrong. please check your connection",
+    data: {},
   };
 }

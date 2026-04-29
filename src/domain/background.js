@@ -1,4 +1,5 @@
 export default function getBackground(condition) {
+  console.log("ini condition", condition);
   if (condition == "Rain") {
     return "rain.webp";
   }
@@ -14,5 +15,5 @@ export default function getBackground(condition) {
   if (condition == "Clear") {
     return "clear.webp";
   }
-  return "Unknown";
+  return "default.webp";
 }

@@ -1,9 +1,10 @@
 import Result from "./result";
 
-function ResultContainer({ data }) {
+function ResultContainer({ weather }) {
+  console.log("in", weather);
   return (
     <div className="result-container">
-      <Result data={data} />
+      <Result weather={weather} />
     </div>
   );
 }
