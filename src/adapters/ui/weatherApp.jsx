@@ -12,7 +12,6 @@ import SearchContainer from "./SearchContainer";
 function WeatherApp() {
   const container = useRef(null);
   const [weather, setWeather] = useState({});
-  console.log("ini weather", weather);
 
   const handleSearch = async (city) => {
     try {
