@@ -11,7 +11,7 @@ function Form({ handleSearch }) {
     setIsi(value);
   };
   const handleClick = (e) => {
-    console.log("clicked");
+  
     e.preventDefault();
     handleSearch(isi.trim());
   };

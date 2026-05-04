@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import "../../../App.css";
 import getWeatherUseCase from "../../application/getWeather";
@@ -10,8 +10,10 @@ import SearchContainer from "./SearchContainer";
 // eslint-disable-next-line no-undef
 
 function WeatherApp() {
-  const container = useRef(null);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({
+    background: "",
+    weatherValue: null,
+  });
 
   const handleSearch = async (city) => {
     try {
@@ -19,14 +21,21 @@ function WeatherApp() {
 
       setWeather(weatherUseCase);
     } catch (error) {
-      throw new error(error);
+      throw new Error(error.message);
     }
   };
 
+  const backgroundClass = weather.background
+    ? `${weather.background}`
+    : "default";
+
   return (
-    <div className="weather-app" ref={container}>
+    <div className={`weather-app ${backgroundClass}`}>
       <SearchContainer handleSearch={handleSearch} />
-      <ResultContainer weather={weather} />
+
+      {weather.weatherValue && (
+        <ResultContainer weather={weather.weatherValue} />
+      )}
     </div>
   );
 }

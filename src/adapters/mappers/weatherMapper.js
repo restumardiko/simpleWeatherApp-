@@ -1,5 +1,4 @@
 export default function mappingTheWeatherRepo(weatherRepo) {
-  console.log("ini weatherRepo", weatherRepo);
   if (weatherRepo.cod === 200) {
     return {
       type: "SUCCESS",

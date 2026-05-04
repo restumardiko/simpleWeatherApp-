@@ -6,21 +6,40 @@ body,
   font-size: small;
 }
 
-#Clouds {
+.Default {
+  background-image: url("/assets/Default.webp");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Clouds {
   background-image: url("/assets/clouds.webp");
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#Haze {
+.Haze {
   background-image: url("/assets/haze.webp");
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#Mist {
+.Mist {
   background-image: url("/assets/mist.webp");
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#Clear {
+.Clear {
   background-image: url("/assets/clear.webp");
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .weather-app {
@@ -29,12 +48,8 @@ body,
   grid-template-rows: 20% 2fr;
   grid-gap: 1em;
   justify-content: center;
-  background-image: url("/assets/clear.webp");
-  height: 100%;
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 100%;
 }
 .search-container {
   justify-self: center;
