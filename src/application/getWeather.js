@@ -8,6 +8,7 @@ export default async function getWeatherUseCase(city, getWeatherRepo) {
   const data = await getWeatherRepo(city);
   //mapper
   const mappedData = mappingTheWeatherRepo(data);
+
   //tentukan weather value
   const weatherValue = getWeatherValue(mappedData);
   //tentukan kondisi weather

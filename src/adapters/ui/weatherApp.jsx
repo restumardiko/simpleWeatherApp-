@@ -21,13 +21,13 @@ function WeatherApp() {
 
       setWeather(weatherUseCase);
     } catch (error) {
-      throw new Error(error.message);
+      error;
     }
   };
 
   const backgroundClass = weather.background
     ? `${weather.background}`
-    : "default";
+    : "Default";
 
   return (
     <div className={`weather-app ${backgroundClass}`}>

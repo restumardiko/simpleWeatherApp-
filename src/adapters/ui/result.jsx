@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 
 function Result({ weather }) {
-  if (weather === undefined) {
+  if (weather.message === "network error") {
     return (
       <>
-        <p>mau cari kota apa ?</p>
+        <h3>please check your connection!</h3>
       </>
     );
   }
   if (weather.message === "city not found !") {
     return (
       <>
-        <p>City not found!</p>
+        <h3>City not found!</h3>
       </>
     );
   }

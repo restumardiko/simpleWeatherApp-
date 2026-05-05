@@ -22,8 +22,8 @@ export default function getWeatherValue(weatherData) {
     };
   }
   return {
-    status: "errorr",
-    message: "something wrong. please check your connection",
+    status: "error",
+    message: "network error",
     data: {},
   };
 }

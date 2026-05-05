@@ -1,4 +1,7 @@
 export default function mappingTheWeatherRepo(weatherRepo) {
+  if (weatherRepo === undefined) {
+    return { type: "NETWORK_MIGHT_ERRROR" };
+  }
   if (weatherRepo.cod === 200) {
     return {
       type: "SUCCESS",
@@ -17,7 +20,4 @@ export default function mappingTheWeatherRepo(weatherRepo) {
       type: "NOT_FOUND",
     };
   }
-  return {
-    type: "NETWORK_MIGHT_ERRROR",
-  };
 }
