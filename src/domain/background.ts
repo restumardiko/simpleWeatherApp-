@@ -1,3 +1,5 @@
 export default function getBackground(condition) {
-  return condition;
+  if (!condition) {
+    return condition;
+  }
 }
