@@ -1,6 +1,14 @@
-export default function mappingTheWeatherRepo(weatherRepo) {
+type fetchedWeather =
+  | { type: "NETWORK_MIGHT_ERROR" }
+  | { type: "SUCCESS"; [key: string]: unknown }
+  | { type: "NOT_FOUND" }
+  | { type: "UNKNOWN_ERROR" };
+
+export default function mappingTheWeatherRepo(
+  weatherRepo: any,
+): fetchedWeather {
   if (weatherRepo === undefined) {
-    return { type: "NETWORK_MIGHT_ERRROR" };
+    return { type: "NETWORK_MIGHT_ERROR" };
   }
   if (weatherRepo.cod === 200) {
     return {
@@ -20,4 +28,5 @@ export default function mappingTheWeatherRepo(weatherRepo) {
       type: "NOT_FOUND",
     };
   }
+  return { type: "UNKNOWN_ERROR" };
 }
