@@ -1,20 +1,22 @@
-import { useState } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 
-// eslint-disable-next-line react/prop-types
-function Form({ handleSearch }) {
+type FormProps = {
+  handleSearch: (value: string) => void;
+};
+
+export function Form({ handleSearch }: FormProps) {
   const [isi, setIsi] = useState("");
 
-  const handleChange = (e) => {
-    e.preventDefault();
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    // console.log(isi);
     setIsi(value);
   };
-  const handleClick = (e) => {
-  
+
+  const handleClick = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleSearch(isi.trim());
   };
+
   return (
     <div className="form">
       <div>
@@ -29,4 +31,5 @@ function Form({ handleSearch }) {
     </div>
   );
 }
+
 export default Form;
